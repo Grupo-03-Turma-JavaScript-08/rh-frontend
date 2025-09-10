@@ -1,1 +1,2 @@
-# rh-frontend
+# React + TypeScript + Vite
+
