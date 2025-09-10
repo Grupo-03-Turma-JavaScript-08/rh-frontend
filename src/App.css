@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header {
+    width: 100%;
+    height: 64px; /* mesma coisa que h-16 */
+    background-color: #0d2a47; /* azul escuro */
+    color: #0d2a47; /* texto */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    position: fixed; /* fixa no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+header .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.card {
-  padding: 2em;
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
-.read-the-docs {
-  color: #888;
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+header ul li a {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: rgba(251, 191, 36, 0.8); /* amarelo */
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+header ul li a:hover {
+    background-color: rgb(251, 191, 36); /* amarelo mais forte */
+}
+
+header ul li a.active {
+    background-color: rgb(251, 191, 36);
 }
